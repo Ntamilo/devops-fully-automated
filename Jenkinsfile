@@ -19,7 +19,7 @@ pipeline {
         stage('Git checkout') {
             steps {
                 echo 'Cloning the application code...'
-                git branch: 'main', url: 'https://github.com/Ntamilo/devops-fully-automated.git'
+                git branch: 'main', url: 'https://github.com/Ntamilo/Nadine-CICD-automated-project.git'
 
             }
         }
@@ -67,7 +67,7 @@ pipeline {
                         sh """
                     mvn sonar:sonar \
                     -Dsonar.projectKey=maven \
-                    -Dsonar.host.url=http://172.31.20.27:9000 \
+                    -Dsonar.host.url=http://172.31.31.155:9000 \
                     -Dsonar.login=$SONAR_TOKEN
                     """
                     }
